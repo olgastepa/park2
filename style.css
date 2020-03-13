@@ -508,6 +508,9 @@ footer {
     .prev, .next,.text {
         font-size: 11px;
     }
+    .prev, .next {
+        color: var(--heading);
+    }
   }
 
   /*
