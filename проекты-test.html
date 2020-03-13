@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=PT Serif' rel='stylesheet'>
+    <title></title>
+</head>
+<body>
+
+<div class="project-container flex-row">
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="assets/проекты/коровник.jpeg" class="sledowhow-img">
+        </div>
+                
+        <div class="mySlides fade">
+            <img src="assets/проекты/складское-помещение.jpeg" class="sledowhow-img">
+        </div>
+                
+        <div class="mySlides fade">
+            <img src="assets/проекты/овощехранилище.jpeg" class="sledowhow-img">
+        </div>
+                
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+    <br>
+                
+        <div class="dots flex-row">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </div>
+
+    <div class="project-desc">
+        <h2 class="subheading">Утепление коровника</h2>
+        <p class="body-text">Открытая ячейка ППУ.  Объект в Адыгее.</p>
+    </div>
+</div>
+
+<div class="project-container flex-row">
+        
+        <div class="project-desc">
+                <h2 class="subheading">Утепление коровника</h2>
+                <p class="body-text">Открытая ячейка ППУ.  Объект в Адыгее.</p>
+            </div>
+        <div class="slideshow-container">
+    
+            <div class="mySlides fade">
+                <img src="assets/проекты/коровник.jpeg" class="sledowhow-img">
+            </div>
+                    
+            <div class="mySlides fade">
+                <img src="assets/проекты/складское-помещение.jpeg" class="sledowhow-img">
+            </div>
+                    
+            <div class="mySlides fade">
+                <img src="assets/проекты/овощехранилище.jpeg" class="sledowhow-img">
+            </div>
+                    
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+        <br>
+                    
+            <div class="dots flex-row">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="flex-column">
+        <img src="assets/footer/парк2-логотип.svg" alt="" class="footer-logo">
+        <a href="" class="footer-title">О нас</a>
+        <a href="" class="footer-title">Проекты</a>
+        <a href="" class="footer-title">Контакты</a>
+        <div class="footer-contact flex-row">
+            <a href="" class="footer-contact-img"><img src="assets/footer/телефон-footer.svg" alt="" class="footer-contact-img"></a>
+            <a href="" class="footer-contact-img"><img src="assets/footer/email-footer.svg" alt="" class="footer-contact-img"></a>
+        </div>
+    </footer>
+
+    <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+
+</body>
+</html>
