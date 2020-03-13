@@ -326,7 +326,8 @@ td {
     width: 200px;
     height: 200px;
     margin: 10px;
-    background-color: grey;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*CONTACT PAGE*/
@@ -779,9 +780,18 @@ em {
   /* [ON SMALL SCREENS] */
   @media screen and (max-width: 768px){
     /* Show Hamburger */
-    .logo-menu {
-
+    .icons-box {
+        margin: 5px;
     }
+    .element.style {
+    }
+    .price-container {
+        width: 100vw;
+    }
+    .heding-btn {
+        margin-left: 10px;
+    }
+
     #page-nav  {
         z-index: 1;
         /*background-color: var(--lightblue);*/
